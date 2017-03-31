@@ -101,10 +101,10 @@ process_codes = function(hse_processed){
   ### Add schedule and owner tenure to ct
   
   ### Owner code tenure
-  hse_processed$ct$owner_code_tenure = hse_processed$owner_codes$Tenure[match(hse_processed$ct$owner_code, hse_processed$owner_codes$Owner.Code)]
+  hse_processed$ct$owner_code_tenure = hse_processed$owner_codes$Tenure[match(hse_processed$ct$Owner.Code, hse_processed$owner_codes$Owner.Code)]
   
   ### Schedule code tenure 
-  hse_processed$ct$schedule_code_tenure = hse_processed$schedule_codes$Tenure[match(hse_processed$ct$schedule_code, hse_processed$schedule_codes$Code)]
+  hse_processed$ct$schedule_code_tenure = hse_processed$schedule_codes$Tenure[match(hse_processed$ct$Schedule.Code, hse_processed$schedule_codes$Code)]
   
   ## Return 
   return(hse_processed)
